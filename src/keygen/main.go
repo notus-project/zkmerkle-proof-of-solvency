@@ -2,15 +2,16 @@ package main
 
 import (
 	"fmt"
-	"github.com/binance/zkmerkle-proof-of-solvency/circuit"
-	"github.com/binance/zkmerkle-proof-of-solvency/src/utils"
+	"runtime"
+	"strconv"
+	"time"
+
 	"github.com/consensys/gnark-crypto/ecc"
 	"github.com/consensys/gnark/backend/groth16"
 	"github.com/consensys/gnark/frontend"
 	"github.com/consensys/gnark/frontend/cs/r1cs"
-	"runtime"
-	"strconv"
-	"time"
+	"github.com/notus-project/zkmerkle-proof-of-solvency/circuit"
+	"github.com/notus-project/zkmerkle-proof-of-solvency/src/utils"
 )
 
 func main() {

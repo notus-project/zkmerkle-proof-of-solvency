@@ -1,8 +1,9 @@
 package witness
 
 import (
-	"github.com/binance/zkmerkle-proof-of-solvency/src/utils"
 	"time"
+
+	"github.com/notus-project/zkmerkle-proof-of-solvency/src/utils"
 
 	"gorm.io/gorm"
 )

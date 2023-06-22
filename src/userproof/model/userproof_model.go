@@ -1,9 +1,10 @@
 package model
 
 import (
-	"github.com/binance/zkmerkle-proof-of-solvency/src/utils"
-	"gorm.io/gorm"
 	"math/big"
+
+	"github.com/notus-project/zkmerkle-proof-of-solvency/src/utils"
+	"gorm.io/gorm"
 )
 
 const TableNamePreifx = "userproof"

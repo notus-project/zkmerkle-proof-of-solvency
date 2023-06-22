@@ -1,8 +1,8 @@
 package circuit
 
 import (
-	"github.com/binance/zkmerkle-proof-of-solvency/src/utils"
 	"github.com/consensys/gnark/frontend"
+	"github.com/notus-project/zkmerkle-proof-of-solvency/src/utils"
 )
 
 type (

@@ -7,17 +7,18 @@ import (
 	"encoding/json"
 	"flag"
 	"fmt"
-	"github.com/binance/zkmerkle-proof-of-solvency/circuit"
-	"github.com/binance/zkmerkle-proof-of-solvency/src/prover/prover"
-	"github.com/binance/zkmerkle-proof-of-solvency/src/utils"
-	"github.com/binance/zkmerkle-proof-of-solvency/src/verifier/config"
+	"io/ioutil"
+	"os"
+
 	"github.com/consensys/gnark-crypto/ecc"
 	"github.com/consensys/gnark-crypto/ecc/bn254/fr/poseidon"
 	"github.com/consensys/gnark/backend/groth16"
 	"github.com/consensys/gnark/frontend"
 	"github.com/gocarina/gocsv"
-	"io/ioutil"
-	"os"
+	"github.com/notus-project/zkmerkle-proof-of-solvency/circuit"
+	"github.com/notus-project/zkmerkle-proof-of-solvency/src/prover/prover"
+	"github.com/notus-project/zkmerkle-proof-of-solvency/src/utils"
+	"github.com/notus-project/zkmerkle-proof-of-solvency/src/verifier/config"
 )
 
 func main() {

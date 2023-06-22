@@ -1,4 +1,4 @@
-module github.com/binance/zkmerkle-proof-of-solvency
+module github.com/notus-project/zkmerkle-proof-of-solvency
 
 go 1.18
 

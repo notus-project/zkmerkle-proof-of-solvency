@@ -1,14 +1,15 @@
 package utils
 
 import (
-	"github.com/consensys/gnark-crypto/ecc/bn254/fr"
 	"math/big"
+
+	"github.com/consensys/gnark-crypto/ecc/bn254/fr"
 )
 
 const (
 	BatchCreateUserOpsCounts = 864
 	AccountTreeDepth         = 28
-	AssetCounts              = 350
+	AssetCounts              = 2
 	RedisLockKey             = "prover_mutex_key"
 )
 

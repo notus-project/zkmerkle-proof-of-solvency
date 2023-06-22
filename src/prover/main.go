@@ -3,7 +3,9 @@ package main
 import (
 	"encoding/json"
 	"flag"
+	"fmt"
 	"io/ioutil"
+	"time"
 
 	"github.com/binance/zkmerkle-proof-of-solvency/src/prover/config"
 	"github.com/binance/zkmerkle-proof-of-solvency/src/prover/prover"
@@ -31,5 +33,8 @@ func main() {
 		proverConfig.MysqlDataSource = s
 	}
 	prover := prover.NewProver(proverConfig)
+	startingTime := time.Now().UTC()
 	prover.Run(*rerun)
+	duration := time.Now().UTC().Sub(startingTime)
+	fmt.Printf("Running Prover after loading the key Takes [%.3f] Seconds \n", duration.Seconds())
 }

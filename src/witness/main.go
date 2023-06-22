@@ -5,6 +5,7 @@ import (
 	"flag"
 	"fmt"
 	"io/ioutil"
+	"time"
 
 	"github.com/binance/zkmerkle-proof-of-solvency/src/utils"
 	"github.com/binance/zkmerkle-proof-of-solvency/src/witness/config"
@@ -44,6 +45,9 @@ func main() {
 	fmt.Printf("account tree root is %x\n", accountTree.Root())
 
 	witnessService := witness.NewWitness(accountTree, uint32(len(accounts)), accounts, cexAssetsInfo, witnessConfig)
+	startingTime := time.Now().UTC()
 	witnessService.Run()
+	duration := time.Now().UTC().Sub(startingTime)
+	fmt.Printf("Running Prover after loading the key Takes [%.3f] Seconds \n", duration.Seconds())
 	fmt.Println("witness service run finished...")
 }

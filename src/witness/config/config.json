@@ -5,7 +5,7 @@
   "TreeDB": {
     "Driver": "redis",
     "Option": {
-      "Addr": "127.0.0.1:6379"
+      "Addr": "127.0.0.1:6666"
     }
   }
 }

@@ -5,5 +5,5 @@
     "Type": "node"
   },
   "DbSuffix": "0",
-  "ZkKeyName": "/server/data/.keys/zkpor864"
+  "ZkKeyName": "/home/ubuntu/zkmerkle-proof-of-solvency/src/keygen/zkpor864"
 }

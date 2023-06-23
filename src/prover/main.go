@@ -7,9 +7,9 @@ import (
 	"io/ioutil"
 	"time"
 
-	"github.com/binance/zkmerkle-proof-of-solvency/src/prover/config"
-	"github.com/binance/zkmerkle-proof-of-solvency/src/prover/prover"
-	"github.com/binance/zkmerkle-proof-of-solvency/src/utils"
+	"github.com/notus-project/zkmerkle-proof-of-solvency/src/prover/config"
+	"github.com/notus-project/zkmerkle-proof-of-solvency/src/prover/prover"
+	"github.com/notus-project/zkmerkle-proof-of-solvency/src/utils"
 )
 
 func main() {

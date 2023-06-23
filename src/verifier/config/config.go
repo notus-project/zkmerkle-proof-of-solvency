@@ -1,8 +1,9 @@
 package config
 
 import (
-	"github.com/binance/zkmerkle-proof-of-solvency/src/utils"
 	"math/big"
+
+	"github.com/notus-project/zkmerkle-proof-of-solvency/src/utils"
 )
 
 type Config struct {

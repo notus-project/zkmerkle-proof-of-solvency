@@ -1,7 +1,7 @@
 package prover
 
 import (
-	"github.com/binance/zkmerkle-proof-of-solvency/src/utils"
+	"github.com/notus-project/zkmerkle-proof-of-solvency/src/utils"
 	"gorm.io/gorm"
 )
 

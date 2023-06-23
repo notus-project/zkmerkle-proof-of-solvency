@@ -1,7 +1,7 @@
 {
   "MysqlDataSource": "zkpos:zkpos@123@tcp(127.0.0.1:3306)/zkpos?parseTime=true",
   "DbSuffix": "0",
-  "UserDataFile": "/server/data/20230118",
+  "UserDataFile": "/home/ubuntu/zkmerkle-proof-of-solvency/sampledata",
   "TreeDB": {
     "Driver": "redis",
     "Option": {

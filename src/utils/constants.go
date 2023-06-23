@@ -7,9 +7,9 @@ import (
 )
 
 const (
-	BatchCreateUserOpsCounts = 864
+	BatchCreateUserOpsCounts = 200
 	AccountTreeDepth         = 28
-	AssetCounts              = 2
+	AssetCounts              = 350
 	RedisLockKey             = "prover_mutex_key"
 )
 

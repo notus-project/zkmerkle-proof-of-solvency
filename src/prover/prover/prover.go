@@ -11,6 +11,7 @@ import (
 	"time"
 
 	"github.com/consensys/gnark-crypto/ecc"
+	"github.com/consensys/gnark/backend"
 	"github.com/consensys/gnark/backend/groth16"
 	"github.com/consensys/gnark/frontend"
 	"github.com/consensys/gnark/std"
@@ -257,7 +258,7 @@ func GenerateAndVerifyProof(r1cs frontend.CompiledConstraintSystem,
 	if err != nil {
 		return proof, err
 	}
-	proof, err = groth16.ProveRoll(r1cs, provingKey[0], provingKey[1], witness, zkKeyName)
+	proof, err = groth16.ProveRoll(r1cs, provingKey[0], provingKey[1], witness, zkKeyName, backend.IgnoreSolverError())
 	if err != nil {
 		return proof, err
 	}

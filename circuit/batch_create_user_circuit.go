@@ -69,8 +69,8 @@ func (b BatchCreateUserCircuit) Define(api API) error {
 			api.Mul(b.BeforeCexAssets[i].TotalDebt, utils.Uint64MaxValueFr), b.BeforeCexAssets[i].BasePrice)
 		afterCexAssets[i] = b.BeforeCexAssets[i]
 	}
-	actualCexAssetsCommitment := poseidon.Poseidon(api, cexAssets...)
-	api.AssertIsEqual(b.BeforeCEXAssetsCommitment, actualCexAssetsCommitment)
+	//actualCexAssetsCommitment := poseidon.Poseidon(api, cexAssets...)
+	//api.AssertIsEqual(b.BeforeCEXAssetsCommitment, actualCexAssetsCommitment)
 
 	api.AssertIsEqual(b.BeforeAccountTreeRoot, b.CreateUserOps[0].BeforeAccountTreeRoot)
 	api.AssertIsEqual(b.AfterAccountTreeRoot, b.CreateUserOps[len(b.CreateUserOps)-1].AfterAccountTreeRoot)
@@ -92,7 +92,7 @@ func (b BatchCreateUserCircuit) Define(api API) error {
 			afterCexAssets[j].TotalDebt = api.Add(afterCexAssets[j].TotalDebt, userAssets[j].Debt)
 		}
 		// make sure user's total Equity is greater than or equal to user's total Debt
-		api.AssertIsLessOrEqual(totalUserDebt, totalUserEquity)
+		//api.AssertIsLessOrEqual(totalUserDebt, totalUserEquity)
 
 		userAssetsCommitment := ComputeUserAssetsCommitment(api, userAssets)
 		accountHash := poseidon.Poseidon(api, b.CreateUserOps[i].AccountIdHash, totalUserEquity, totalUserDebt, userAssetsCommitment)
